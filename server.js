@@ -12,7 +12,7 @@ app.use(cookieParser());
 
 app.use(express.json());
 const corsOptions = {
-  origin: 'http://localhost:5173', // frontend origin (not '*')
+  origin: 'https://appointment-henna-one.vercel.app', // frontend origin (not '*')
   credentials: true,               // allow cookies
 };
 
