@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const sendNotification = require('../utils/sendNotification');
 
 // Every minute
-cron.schedule('* * * * *', async () => {
+cron.schedule('0 * * * *', async () => {
   console.log(' Running duplicate appointment check...');
 
   try {
@@ -28,7 +28,7 @@ cron.schedule('* * * * *', async () => {
       }
     }
 
-    console.log('✅ Duplicate scan finished');
+    console.log(' Duplicate scan finished');
   } catch (err) {
     console.error('Cron job error:', err);
   }
